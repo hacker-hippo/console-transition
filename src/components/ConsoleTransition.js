@@ -18,14 +18,18 @@ export const ConsoleTransition = () => {
         <img
           src={goldConsole}
           alt="Gold console"
-          className="absolute inset-0 w-full h-full object-contain"
+          className="absolute inset-0 w-full h-full object-contain select-none"
+          onContextMenu={(e) => e.preventDefault()}
+          style={{ WebkitTouchCallout: 'none', userSelect: 'none' }}
         />
         <img
           src={purpleConsole}
           alt="Purple console"
-          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ease-in-out select-none ${
             isTouching ? 'opacity-100' : 'opacity-0'
           }`}
+          onContextMenu={(e) => e.preventDefault()}
+          style={{ WebkitTouchCallout: 'none', userSelect: 'none' }}
         />
       </div>
     </div>
